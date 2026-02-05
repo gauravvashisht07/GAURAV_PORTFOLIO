@@ -14,6 +14,10 @@ const Navbar = () => {
     { label: "Contact", id: "contact" },
   ];
 
+  const handleNavClick = () => {
+    setMobileOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-md border-b border-gray-200/30 dark:border-gray-800/30 shadow-sm transition-all">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -100,8 +104,9 @@ const Navbar = () => {
             onClick={() => setMobileOpen(!mobileOpen)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="md:hidden p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+            className="md:hidden p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition z-40"
             aria-label="Toggle Mobile Menu"
+            type="button"
           >
             <AnimatePresence mode="wait">
               {mobileOpen ? (
@@ -138,9 +143,9 @@ const Navbar = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800"
+            className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 shadow-lg"
           >
-            <ul className="px-6 py-3 space-y-2">
+            <ul className="px-6 py-4 space-y-1 max-h-screen overflow-y-auto">
               {navItems.map((item) => (
                 <motion.li
                   key={item.id}
@@ -150,8 +155,8 @@ const Navbar = () => {
                 >
                   <a
                     href={`#${item.id}`}
-                    className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition font-medium"
-                    onClick={() => setMobileOpen(false)}
+                    className="block px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition font-medium"
+                    onClick={handleNavClick}
                   >
                     {item.label}
                   </a>
