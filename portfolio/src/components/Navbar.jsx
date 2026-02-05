@@ -152,10 +152,11 @@ const Navbar = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.2 }}
+                  style={{ pointerEvents: "auto" }}
                 >
                   <a
                     href={`#${item.id}`}
-                    className="block px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition font-medium"
+                    className="block px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition font-medium cursor-pointer"
                     onClick={handleNavClick}
                   >
                     {item.label}
