@@ -80,7 +80,7 @@ const App = () => {
               by Gaurav Sharma
             </p>
             <p className="text-sm text-gray-500 mt-3">
-              © 2024 All rights reserved • Built with React + Vite + Tailwind
+              © {new Date().getFullYear()} All rights reserved • Built with React + Vite + Tailwind
             </p>
           </div>
         </footer>
