@@ -49,15 +49,23 @@ const App = () => {
 
       {/* Main content */}
       <main className="pt-20">
-        <Hero />
+        <section id="home">
+          <Hero />
+        </section>
         <Stats />
-        <About />
+        <section id="about">
+          <About />
+        </section>
         <Experience />
         <Skills />
-        <Projects />
+        <section id="projects">
+          <Projects />
+        </section>
         <Certificates />
         <Testimonials />
-        <Contact />
+        <section id="contact">
+          <Contact />
+        </section>
 
         {/* Footer */}
         <footer className="bg-gradient-to-r from-gray-900 to-black dark:from-black dark:to-gray-900 text-white py-12 text-center border-t border-gray-800 relative overflow-hidden">
