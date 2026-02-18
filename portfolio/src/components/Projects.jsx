@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt, FaStar } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaStar, FaChevronDown } from "react-icons/fa";
+import { useState } from "react";
+
 const projects = [
   {
     title: "Astrology Website (Freelance)",
@@ -13,8 +15,8 @@ const projects = [
       "Delivered a live website hosted on GitHub Pages",
     ],
     tech: ["HTML", "CSS", "JavaScript"],
-    live: "#",
-    github: "#",
+    live: "https://gauravvashisht07.github.io/ASTROLOGY-WEBSITE/",
+    github: "https://github.com/gauravvashisht07/ASTROLOGY-WEBSITE",
     featured: true,
   },
   {
@@ -30,7 +32,7 @@ const projects = [
     ],
     tech: ["Node.js", "MongoDB", "Tailwind CSS"],
     live: "#",
-    github: "#",
+    github: "https://github.com/gauravvashisht07/LOST-FOUND-PORTAL",
     featured: true,
   },
   {
@@ -45,8 +47,8 @@ const projects = [
       "Deployed the website using GitHub Pages",
     ],
     tech: ["React", "Vite", "Tailwind CSS"],
-    live: "#",
-    github: "#",
+    live: "https://gaurav-portfolio-live.vercel.app/",
+    github: "https://github.com/gauravvashisht07/GAURAV_PORTFOLIO",
     featured: false,
   },
   {
@@ -64,9 +66,62 @@ const projects = [
     github: "#",
     featured: false,
   },
+  {
+  title: "Blinkit Clone (Frontend UI Project)",
+  description:
+    "A responsive frontend clone of the Blinkit website built using pure HTML and CSS, focusing on layout structuring, pixel-perfect design, and responsive user interface implementation.",
+  points: [
+    "Recreated Blinkit's homepage layout including navbar, product sections, banners, and footer",
+    "Implemented responsive design using Flexbox and CSS Grid",
+    "Designed reusable UI components for product cards and category sections",
+    "Ensured mobile responsiveness across different screen sizes",
+    "Improved layout alignment and spacing to closely match the original website design"
+  ],
+  tech: ["HTML", "CSS", "Responsive Design"],
+  live: "https://gauravvashisht07.github.io/BLINKIT-CLONE/",
+  github: "https://github.com/gauravvashisht07/BLINKIT-CLONE",
+  featured: false,
+},
+{
+  title: "Car Rental Web App(MERN Stack)",
+  description:
+    "A full-stack car rental web application that allows users to search and rent cars based on location, availability, and rental duration. Built using the MERN stack with a focus on scalable backend architecture and responsive UI.",
+  points: [
+    "Implemented location-based car search with dynamic availability filtering",
+    "Developed RESTful APIs using Node.js and Express for booking, user management, and car listings",
+    "Designed a responsive frontend using React for seamless user experience",
+    "Integrated MongoDB for storing car data, user profiles, and booking records",
+    "Implemented booking workflow including rental duration selection and confirmation",
+    "Structured backend for scalability and efficient data querying"
+  ],
+  tech: ["React", "Node.js", "Express", "MongoDB"],
+  live: "#",
+  github: "https://github.com/gauravvashisht07/CAR_RENTAL_WEBSITE",
+  featured: true,
+},
+{
+  title: "Calculator Web Application",
+  description:
+    "A responsive calculator web application built using HTML, CSS, and JavaScript to perform basic arithmetic operations with a clean and user-friendly interface.",
+  points: [
+    "Implemented core arithmetic operations including addition, subtraction, multiplication, and division",
+    "Designed a structured button layout with intuitive user interaction",
+    "Handled input validation and calculation logic using JavaScript",
+    "Built a responsive UI with modern styling and hover effects",
+    "Optimized layout for both desktop and mobile screen sizes"
+  ],
+  tech: ["HTML", "CSS", "JavaScript"],
+  live: "https://gauravvashisht07.github.io/CALCULATOR/",
+  github: "https://github.com/gauravvashisht07/CALCULATOR",
+  featured: false,
+},
+
+
 ];
 
 const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -76,6 +131,9 @@ const Projects = () => {
       },
     },
   };
+
+  // Filter projects: show featured first, then all if expanded
+  const displayedProjects = showAll ? projects : projects.filter(p => p.featured);
 
   return (
     <section
@@ -109,7 +167,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="grid gap-8 md:grid-cols-2"
         >
-          {projects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -197,6 +255,58 @@ const Projects = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Show All/Hide Button */}
+        {!showAll && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="flex justify-center mt-12"
+          >
+            <motion.button
+              onClick={() => setShowAll(true)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center gap-3 px-8 py-3 rounded-full font-bold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all cursor-pointer border border-transparent hover:border-blue-400"
+            >
+              View All Projects ({projects.length})
+              <motion.div
+                animate={{ y: [0, 6, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                <FaChevronDown className="text-lg" />
+              </motion.div>
+            </motion.button>
+          </motion.div>
+        )}
+
+        {/* Hide/Show Less Button */}
+        {showAll && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="flex justify-center mt-12"
+          >
+            <motion.button
+              onClick={() => setShowAll(false)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center gap-3 px-8 py-3 rounded-full font-bold text-white bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 shadow-lg hover:shadow-xl transition-all cursor-pointer border border-transparent hover:border-gray-500"
+            >
+              Show Featured Only
+              <motion.div
+                animate={{ y: [0, -6, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                <FaChevronDown className="text-lg rotate-180" />
+              </motion.div>
+            </motion.button>
+          </motion.div>
+        )}
       </div>
     </section>
   );
