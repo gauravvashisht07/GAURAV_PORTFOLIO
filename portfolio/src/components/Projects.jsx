@@ -1,15 +1,16 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaStar } from "react-icons/fa";
-
 const projects = [
   {
     title: "Astrology Website (Freelance)",
     description:
-      "Designed and developed a fully responsive astrology website for a freelance client with modern UI, optimized layouts, and smooth animations.",
+      "Designed and developed a production-ready, fully responsive astrology website for a freelance client, focusing on modern UI/UX, performance optimization, and cross-device compatibility.",
     points: [
-      "Built custom UI sections for zodiac signs, gemstones, and remedies",
-      "Improved page load performance by ~30%",
-      "Achieved 100% mobile responsiveness",
+      "Built custom UI sections for zodiac signs, gemstones, and astrological remedies",
+      "Implemented modern layouts, smooth animations, and mobile-first design",
+      "Optimized assets and layouts, improving page load performance by ~30%",
+      "Achieved 100% mobile responsiveness across all screen sizes",
+      "Delivered a live website hosted on GitHub Pages",
     ],
     tech: ["HTML", "CSS", "JavaScript"],
     live: "#",
@@ -19,11 +20,13 @@ const projects = [
   {
     title: "Lost and Found Web Application",
     description:
-      "A full-stack web platform enabling users to report lost and found items with real-time communication.",
+      "A full-stack web platform that helps users report lost and found items and connect directly through real-time communication to enable faster recovery.",
     points: [
-      "Implemented real-time chat between item owner and finder",
-      "Designed scalable backend using Node.js & MongoDB",
-      "Reduced recovery response time by ~40%",
+      "Developed functionality for users to post lost and found items with images and detailed information",
+      "Implemented real-time chat between item owner and finder for faster coordination",
+      "Designed a clean, responsive UI with search and filter capabilities",
+      "Built a scalable backend architecture using Node.js and MongoDB",
+      "Reduced item recovery response time by approximately 40%",
     ],
     tech: ["Node.js", "MongoDB", "Tailwind CSS"],
     live: "#",
@@ -33,11 +36,13 @@ const projects = [
   {
     title: "Personal Portfolio Website",
     description:
-      "A modern, responsive portfolio built with React and Vite to showcase skills and projects.",
+      "A modern, fast, and responsive personal portfolio website built to showcase projects, skills, and experience with a clean and professional design.",
     points: [
-      "Component-based architecture with clean UI",
-      "Optimized performance using Vite",
-      "Improved SEO and faster indexing",
+      "Built using React and Vite with a component-based architecture",
+      "Implemented smooth UI interactions and responsive layouts",
+      "Optimized performance and reduced initial load time using Vite",
+      "Improved SEO for better visibility and faster indexing",
+      "Deployed the website using GitHub Pages",
     ],
     tech: ["React", "Vite", "Tailwind CSS"],
     live: "#",
@@ -47,10 +52,12 @@ const projects = [
   {
     title: "Multiplayer Shooting Game",
     description:
-      "A real-time multiplayer FPS game built using Unity Engine with client-server synchronization.",
+      "A real-time multiplayer FPS game developed using Unity Engine with focus on low-latency gameplay and seamless multiplayer experience.",
     points: [
-      "Implemented matchmaking and lobby systems",
-      "Optimized network performance for low latency",
+      "Implemented multiplayer matchmaking and lobby systems",
+      "Handled real-time client-server synchronization",
+      "Optimized network performance to reduce latency during gameplay",
+      "Enhanced overall multiplayer experience through performance tuning",
     ],
     tech: ["Unity", "C#", "Alteruna"],
     live: "#",

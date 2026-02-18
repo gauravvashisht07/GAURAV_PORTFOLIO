@@ -15,6 +15,24 @@ const certificates = [
     category: "Data Science",
   },
   {
+    title: "Client Needs and Software Requirements",
+    issuer: "University of Alberta (Coursera)",
+    year: "2026",
+    category: "Software Engineering",
+  },
+  {
+    title: "Software Processes and Agile Practices",
+    issuer: "University of Alberta (Coursera)",
+    year: "2026",
+    category: "Software Engineering",
+  },
+  {
+    title: "Introduction to Software Product Management",
+    issuer: "University of Alberta (Coursera)",
+    year: "2026",
+    category: "Product & Agile",
+  },
+  {
     title: "Generative AI Mastermind",
     issuer: "Certificate of Completion",
     year: "2025",
@@ -41,13 +59,16 @@ const certificates = [
 ];
 
 const Certificates = () => {
-  const categoryColors = {
-    "AI/ML": "from-purple-500 to-pink-500",
-    "Data Science": "from-blue-500 to-cyan-500",
-    "AI": "from-indigo-500 to-purple-500",
-    "Web Dev": "from-yellow-500 to-orange-500",
-    "Languages": "from-green-500 to-teal-500",
-  };
+ const categoryColors = {
+  "AI/ML": "from-purple-500 to-pink-500",
+  "Data Science": "from-blue-500 to-cyan-500",
+  "AI": "from-indigo-500 to-purple-500",
+  "Web Dev": "from-yellow-500 to-orange-500",
+  "Languages": "from-green-500 to-teal-500",
+  "Software Engineering": "from-red-500 to-rose-500",
+  "Product & Agile": "from-sky-500 to-blue-600",
+};
+
 
   return (
     <section

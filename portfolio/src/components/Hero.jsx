@@ -22,6 +22,34 @@ const Hero = () => {
       </div>
 
       <div className="max-w-5xl text-center relative z-10">
+        {/* Profile Picture */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="mb-8 flex justify-center"
+        >
+          <div className="relative w-40 h-40 md:w-48 md:h-48">
+            {/* Animated border ring */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 p-1"
+            >
+              <div className="w-full h-full rounded-full bg-gray-900 dark:bg-gray-950" />
+            </motion.div>
+
+            {/* Profile Image */}
+            <div className="absolute inset-1 rounded-full overflow-hidden bg-gray-900 dark:bg-gray-950">
+              <img 
+                src="/Profile.png" 
+                alt="Gaurav Sharma"
+                className="w-full h-full rounded-full object-cover"
+              />
+            </div>
+          </div>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -29,7 +57,7 @@ const Hero = () => {
           className="mb-6"
         >
           <span className="inline-block px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 text-sm font-semibold">
-            ✨ Welcome to my Portfolio
+             Software Engineer • Web Developer
           </span>
         </motion.div>
 
@@ -67,7 +95,7 @@ const Hero = () => {
           className="mt-12 flex flex-wrap justify-center gap-4"
         >
           <motion.a
-            href="/Gaurav_Sharma_Resume.pdf"
+            href="/GauravSharmaResume.pdf"
             download
             whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(37, 99, 235, 0.3)" }}
             whileTap={{ scale: 0.95 }}

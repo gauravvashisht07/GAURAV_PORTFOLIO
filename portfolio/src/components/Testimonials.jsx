@@ -2,32 +2,32 @@ import { motion } from "framer-motion";
 import { FaStar, FaQuoteLeft } from "react-icons/fa";
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      name: "Client A",
-      role: "Startup Founder",
-      feedback:
-        "Gaurav delivered an amazing website that exceeded our expectations. His attention to detail and communication was exceptional.",
-      rating: 5,
-      avatar: "👨‍💼",
-    },
-    {
-      name: "Client B",
-      role: "Small Business Owner",
-      feedback:
-        "Working with Gaurav was a pleasure. He understood our vision and translated it into a beautiful, functional website.",
-      rating: 5,
-      avatar: "👩‍💼",
-    },
-    {
-      name: "Colleague C",
-      role: "Tech Mentor",
-      feedback:
-        "Gaurav shows great promise as a developer. He's eager to learn and has strong problem-solving skills.",
-      rating: 5,
-      avatar: "👨‍🏫",
-    },
-  ];
+ const testimonials = [
+  {
+    name: "Freelance Client",
+    role: "Astrology Website Project",
+    feedback:
+      "Gaurav designed and developed a fully responsive astrology website for my business. He understood the requirements clearly, delivered the project on time, and handled revisions smoothly. The final website looks professional and works perfectly across devices.",
+    rating: 5,
+    avatar: "🌐",
+  },
+  {
+    name: "Academic Mentor",
+    role: "Computer Science Engineering",
+    feedback:
+      "Gaurav has a strong grasp of core computer science concepts and applies them effectively in practical projects. His approach to problem-solving and backend logic shows maturity beyond coursework.",
+    rating: 5,
+    avatar: "🎓",
+  },
+  {
+    name: "Project Evaluation",
+    role: "Full-Stack Development",
+    feedback:
+      "Through multiple full-stack projects, Gaurav has demonstrated the ability to design scalable applications, implement real-time features, and write clean, maintainable code.",
+    rating: 5,
+    avatar: "💻",
+  },
+];
 
   return (
     <section className="py-20 px-6 bg-gradient-to-br from-white via-purple-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-800 relative overflow-hidden">

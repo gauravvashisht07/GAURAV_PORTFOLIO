@@ -20,7 +20,7 @@ const Stats = () => {
     },
     {
       icon: <FaTrophy />,
-      number: "6",
+      number: "9",
       label: "Certifications",
       suffix: "",
       color: "from-yellow-500 to-orange-500",

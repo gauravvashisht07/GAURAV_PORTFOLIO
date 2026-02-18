@@ -3,37 +3,46 @@ import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
 
 const Experience = () => {
   const experiences = [
-    {
-      type: "education",
-      title: "Bachelor of Technology",
-      subtitle: "Computer Science Engineering",
-      organization: "Engineering College",
-      period: "2021 - 2024",
-      description:
-        "Final year student focusing on DSA, OOP, and full-stack web development. Actively involved in coding competitions and projects.",
-      highlights: ["CGPA: 8.5+", "Active in coding contests"],
-    },
-    {
-      type: "work",
-      title: "Freelance Web Developer",
-      subtitle: "Full Stack Development",
-      organization: "Self-employed",
-      period: "2023 - Present",
-      description:
-        "Developed multiple web applications and websites for clients. Specialized in React, Node.js, and responsive design.",
-      highlights: ["3+ Projects Delivered", "100% Client Satisfaction"],
-    },
-    {
-      type: "work",
-      title: "Open Source Contributor",
-      subtitle: "Community Development",
-      organization: "Various Open Source Projects",
-      period: "2023 - Present",
-      description:
-        "Contributing to open-source projects and helping the developer community through code reviews and documentation.",
-      highlights: ["Active Contributor", "Community Helper"],
-    },
-  ];
+  {
+    type: "education",
+    title: "Bachelor of Engineering (B.E.)",
+    subtitle: "Computer Science Engineering",
+    organization: "Chitkara University",
+    period: "2022 - Present",
+    description:
+      "Final-year Computer Science Engineering student with a strong focus on Data Structures & Algorithms, Object-Oriented Programming, and full-stack web development. Actively building real-world projects and strengthening problem-solving skills.",
+    highlights: [
+      "Strong foundation in DSA and OOP concepts",
+      "Hands-on experience with full-stack projects",
+    ],
+  },
+  {
+    type: "work",
+    title: "Freelance Web Developer",
+    subtitle: "Frontend & Full-Stack Development",
+    organization: "Self-Employed",
+    period: "2024 - Present",
+    description:
+      "Worked with clients to design and develop responsive, production-ready websites and web applications with a focus on performance, usability, and clean UI.",
+    highlights: [
+      "Delivered a live freelance project with modern UI/UX",
+      "Built fully responsive and optimized web solutions",
+    ],
+  },
+  {
+    type: "work",
+    title: "Project-Based Full Stack Developer",
+    subtitle: "Personal & Academic Projects",
+    organization: "Independent Projects",
+    period: "2024 - Present",
+    description:
+      "Developed multiple full-stack and real-time applications to solve real-world problems, focusing on scalable backend logic and clean frontend architecture.",
+    highlights: [
+      "Built full-stack applications using Node.js and MongoDB",
+      "Implemented real-time features like chat systems",
+    ],
+  },
+];
 
   return (
     <section className="py-20 px-6 bg-gradient-to-br from-gray-50 via-blue-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">

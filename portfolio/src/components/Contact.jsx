@@ -129,7 +129,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="mt-12 text-sm text-gray-500 dark:text-gray-400"
         >
-          <span className="text-2xl mb-2 inline-block">✨</span>
+          <span className="text-2xl mb-2 inline-block"> </span>
           <br />
           Thanks for visiting! Let's build something amazing together.
         </motion.p>
