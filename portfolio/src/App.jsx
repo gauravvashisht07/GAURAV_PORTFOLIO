@@ -31,14 +31,18 @@ const App = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.classList.add("dark");
+  }, []);
+
   return (
-    <div className="bg-white dark:bg-gray-900 transition-colors duration-300 overflow-x-hidden cursor-none">
+    <div className="bg-gray-900 overflow-x-hidden cursor-none">
       {/* Custom cursor */}
       <Cursor />
 
       {/* Scroll Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 z-50"
+        className="fixed top-0 left-0 h-1 bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 z-50"
         initial={{ scaleX: 0 }}
         style={{ scaleX: scrollProgress / 100 }}
         transition={{ scaleX: { type: "tween", ease: "easeInOut" } }}
@@ -68,7 +72,7 @@ const App = () => {
         </section>
 
         {/* Footer */}
-        <footer className="bg-gradient-to-r from-gray-900 to-black dark:from-black dark:to-gray-900 text-white py-12 text-center border-t border-gray-800 relative overflow-hidden">
+        <footer className="bg-linear-to-r from-gray-900 to-black dark:from-black dark:to-gray-900 text-white py-12 text-center border-t border-gray-800 relative overflow-hidden">
           {/* Background decoration */}
           <div className="absolute inset-0 opacity-5">
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
@@ -105,7 +109,7 @@ const App = () => {
         }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="fixed bottom-8 right-8 z-40 p-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-xl transition-all"
+        className="fixed bottom-8 right-8 z-40 p-3 rounded-full bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-xl transition-all"
         aria-label="Scroll to top"
       >
         <svg

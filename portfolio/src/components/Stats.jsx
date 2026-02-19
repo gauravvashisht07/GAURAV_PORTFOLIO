@@ -35,11 +35,11 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden">
+    <section className="py-20 px-6 bg-linear-to-br from-gray-800 to-gray-900 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-blue-200/10 dark:bg-blue-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-purple-200/10 dark:bg-purple-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
@@ -50,10 +50,10 @@ const Stats = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 to-blue-600 dark:from-white dark:to-blue-400 bg-clip-text text-transparent mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-white to-blue-400 bg-clip-text text-transparent mb-4">
             Quick Stats
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 text-lg">
+          <p className="text-gray-300 text-lg">
             A snapshot of my journey and achievements
           </p>
         </motion.div>
@@ -106,7 +106,7 @@ const StatCard = ({ stat, index }) => {
     >
       <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} rounded-2xl opacity-0 group-hover:opacity-10 transition-all blur`} />
 
-      <div className="relative p-8 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg group-hover:shadow-xl group-hover:border-transparent transition-all">
+      <div className="relative p-8 rounded-2xl bg-gray-800 border border-gray-700 shadow-lg group-hover:shadow-xl group-hover:border-transparent transition-all">
         {/* Icon */}
         <motion.div
           whileHover={{ scale: 1.1, rotate: 10 }}
@@ -123,7 +123,7 @@ const StatCard = ({ stat, index }) => {
         </div>
 
         {/* Label */}
-        <p className="text-gray-600 dark:text-gray-400 font-medium">
+        <p className="text-gray-400 font-medium">
           {stat.label}
         </p>
 

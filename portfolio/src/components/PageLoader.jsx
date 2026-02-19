@@ -8,7 +8,7 @@ const PageLoader = ({ isComplete = false }) => {
       animate={{ opacity: isComplete ? 0 : 1 }}
       transition={{ duration: 0.5, delay: isComplete ? 0.3 : 0 }}
       onAnimationComplete={() => isComplete}
-      className={`fixed inset-0 bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 z-40 flex items-center justify-center ${
+      className={`fixed inset-0 bg-gradient-to-br from-gray-900 to-gray-800 z-40 flex items-center justify-center ${
         isComplete ? "pointer-events-none" : ""
       }`}
     >
@@ -23,7 +23,7 @@ const PageLoader = ({ isComplete = false }) => {
         </motion.div>
 
         {/* Loading bar */}
-        <div className="w-48 h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+        <div className="w-48 h-1 bg-gray-700 rounded-full overflow-hidden">
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: "100%" }}
@@ -36,7 +36,7 @@ const PageLoader = ({ isComplete = false }) => {
         <motion.p
           animate={{ opacity: [0.6, 1, 0.6] }}
           transition={{ duration: 1.5, repeat: Infinity }}
-          className="text-gray-600 dark:text-gray-400 text-sm"
+          className="text-gray-400 text-sm"
         >
           Building something amazing...
         </motion.p>

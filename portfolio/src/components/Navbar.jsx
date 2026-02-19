@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-40 bg-white/70 dark:bg-gray-900/70 backdrop-blur-md border-b border-gray-200/30 dark:border-gray-800/30 shadow-sm transition-all">
+      <nav className="fixed top-0 left-0 w-full z-40 bg-gray-900/70 backdrop-blur-md border-b border-gray-800/30 shadow-sm transition-all">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo / Name */}
           <motion.div
@@ -40,10 +40,10 @@ const Navbar = () => {
             transition={{ duration: 0.5 }}
           >
             <a href="#home" className="text-xl font-bold">
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 GS
               </span>
-              <span className="text-gray-800 dark:text-gray-200 ml-1">Gaurav</span>
+              <span className="text-gray-200 ml-1">Gaurav</span>
             </a>
           </motion.div>
 
@@ -58,13 +58,13 @@ const Navbar = () => {
               <li key={item.id}>
                 <a
                   href={`#${item.id}`}
-                  className="text-gray-700 dark:text-gray-300 font-medium hover:text-blue-600 dark:hover:text-blue-400 transition relative group text-sm"
+                  className="text-gray-300 font-medium hover:text-blue-400 transition relative group text-sm"
                 >
                   {item.label}
                   <motion.span
                     initial={{ scaleX: 0 }}
                     whileHover={{ scaleX: 1 }}
-                    className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 origin-left rounded-full"
+                    className="absolute bottom-0 left-0 w-full h-0.5 bg-linear-to-r from-blue-600 to-purple-600 origin-left rounded-full"
                   />
                 </a>
               </li>
@@ -81,7 +81,7 @@ const Navbar = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={handleMenuToggle}
-              className="md:hidden p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition cursor-pointer"
+              className="md:hidden p-2 rounded-lg text-gray-300 hover:bg-gray-800 transition cursor-pointer"
               aria-label="Toggle Mobile Menu"
               type="button"
             >
@@ -94,7 +94,7 @@ const Navbar = () => {
       {/* Mobile Menu - Separate from nav bar */}
       {mobileOpen && (
         <div 
-          className="fixed top-0 left-0 w-full h-screen z-30 bg-gradient-to-br from-gray-900 via-gray-950 to-black flex flex-col overflow-hidden"
+          className="fixed top-0 left-0 w-full h-screen z-30 bg-linear-to-br from-gray-900 via-gray-950 to-black flex flex-col overflow-hidden"
           onClick={handleMenuClose}
         >
           {/* Decorative background elements */}
@@ -121,7 +121,7 @@ const Navbar = () => {
                       e.preventDefault();
                       scrollToSection(item.id);
                     }}
-                    className="text-5xl md:text-6xl font-black bg-gradient-to-r from-white via-blue-200 to-purple-400 bg-clip-text text-transparent hover:from-blue-400 hover:via-purple-300 hover:to-pink-400 transition-all duration-300 cursor-pointer block py-2 group"
+                    className="text-5xl md:text-6xl font-black bg-linear-to-r from-white via-blue-200 to-purple-400 bg-clip-text text-transparent hover:from-blue-400 hover:via-purple-300 hover:to-pink-400 transition-all duration-300 cursor-pointer block py-2 group"
                   >
                     <span className="inline-block group-hover:scale-110 transition-transform duration-300">{item.label}</span>
                   </a>
@@ -143,7 +143,7 @@ const Navbar = () => {
                 e.preventDefault();
                 scrollToSection("contact");
               }}
-              className="w-full inline-flex items-center justify-center bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-5 rounded-2xl font-bold text-lg cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105"
+              className="w-full inline-flex items-center justify-center bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-5 rounded-2xl font-bold text-lg cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105"
             >
               Get In Touch
             </a>

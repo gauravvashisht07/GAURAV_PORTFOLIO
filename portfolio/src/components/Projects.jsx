@@ -138,10 +138,10 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 px-6 bg-gradient-to-br from-gray-50 via-blue-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-800 transition-colors relative overflow-hidden"
+      className="py-20 px-6 bg-linear-to-br from-gray-900 via-gray-800 to-gray-800 relative overflow-hidden"
     >
       {/* Background decoration */}
-      <div className="absolute top-20 -right-40 w-96 h-96 bg-blue-200/10 dark:bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-20 -right-40 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
       
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
@@ -151,13 +151,13 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 to-blue-600 dark:from-white dark:to-blue-400 bg-clip-text text-transparent mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-white to-blue-400 bg-clip-text text-transparent mb-4">
             Featured Projects
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Explore some of my recent projects showcasing my skills in full-stack development and UI/UX design.
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mt-6" />
+          <div className="w-20 h-1 bg-linear-to-r from-blue-600 to-purple-600 mx-auto rounded-full mt-6" />
         </motion.div>
 
         <motion.div
@@ -175,28 +175,28 @@ const Projects = () => {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
               whileHover={{ y: -12, boxShadow: "0 30px 60px rgba(0, 0, 0, 0.15)" }}
-              className="group relative p-8 rounded-2xl bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all overflow-hidden"
+              className="group relative p-8 rounded-2xl bg-gray-800 shadow-lg border border-gray-700 hover:border-blue-600 transition-all overflow-hidden"
             >
               {/* Background gradient on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 transition-all pointer-events-none" />
+              <div className="absolute inset-0 bg-linear-to-br from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 transition-all pointer-events-none" />
 
               {/* Featured badge */}
               {project.featured && (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  className="absolute top-4 right-4 flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-400 text-white text-xs font-bold rounded-full"
+                  className="absolute top-4 right-4 flex items-center gap-1 px-3 py-1 bg-linear-to-r from-yellow-400 to-orange-400 text-white text-xs font-bold rounded-full"
                 >
                   <FaStar className="text-sm" /> Featured
                 </motion.div>
               )}
 
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-5">
+                <p className="text-gray-300 leading-relaxed mb-5">
                   {project.description}
                 </p>
 
@@ -205,9 +205,9 @@ const Projects = () => {
                   {project.points.map((point, i) => (
                     <li
                       key={i}
-                      className="text-sm text-gray-600 dark:text-gray-400 flex items-start gap-2"
+                      className="text-sm text-gray-400 flex items-start gap-2"
                     >
-                      <span className="text-blue-600 dark:text-blue-400 mt-1 flex-shrink-0">
+                      <span className="text-blue-400 mt-1 shrink-0">
                         ✓
                       </span>
                       <span>{point}</span>
@@ -221,7 +221,7 @@ const Projects = () => {
                     <motion.span
                       key={i}
                       whileHover={{ scale: 1.05 }}
-                      className="px-3 py-1.5 text-sm font-medium rounded-full bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 dark:from-blue-900/40 dark:to-purple-900/40 dark:text-blue-300 border border-blue-200 dark:border-blue-700 hover:border-blue-400 dark:hover:border-blue-500 transition"
+                      className="px-3 py-1.5 text-sm font-medium rounded-full bg-blue-900/40 text-blue-300 border border-blue-700 hover:border-blue-500 transition"
                     >
                       {tech}
                     </motion.span>
@@ -229,14 +229,14 @@ const Projects = () => {
                 </div>
 
                 {/* Links */}
-                <div className="flex gap-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                <div className="flex gap-4 pt-4 border-t border-gray-700">
                   <motion.a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition"
+                    className="flex items-center gap-2 text-gray-300 hover:text-blue-400 font-semibold transition"
                   >
                     <FaGithub className="text-lg" /> Code
                   </motion.a>
@@ -246,7 +246,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition"
+                    className="flex items-center gap-2 text-gray-300 hover:text-blue-400 font-semibold transition"
                   >
                     <FaExternalLinkAlt className="text-lg" /> Live
                   </motion.a>
@@ -269,7 +269,7 @@ const Projects = () => {
               onClick={() => setShowAll(true)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-3 px-8 py-3 rounded-full font-bold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all cursor-pointer border border-transparent hover:border-blue-400"
+              className="flex items-center gap-3 px-8 py-3 rounded-full font-bold text-white bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all cursor-pointer border border-transparent hover:border-blue-400"
             >
               View All Projects ({projects.length})
               <motion.div
@@ -295,7 +295,7 @@ const Projects = () => {
               onClick={() => setShowAll(false)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-3 px-8 py-3 rounded-full font-bold text-white bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 shadow-lg hover:shadow-xl transition-all cursor-pointer border border-transparent hover:border-gray-500"
+              className="flex items-center gap-3 px-8 py-3 rounded-full font-bold text-white bg-linear-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 shadow-lg hover:shadow-xl transition-all cursor-pointer border border-transparent hover:border-gray-500"
             >
               Show Featured Only
               <motion.div

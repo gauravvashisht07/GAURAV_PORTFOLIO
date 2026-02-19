@@ -73,10 +73,10 @@ const Certificates = () => {
   return (
     <section
       id="certificates"
-      className="py-20 px-6 bg-gradient-to-br from-gray-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900 transition-colors relative overflow-hidden"
+      className="py-20 px-6 bg-linear-to-br from-gray-900 via-gray-800 to-purple-900 relative overflow-hidden"
     >
       {/* Background decoration */}
-      <div className="absolute top-40 -right-40 w-80 h-80 bg-pink-200/10 dark:bg-pink-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-40 -right-40 w-80 h-80 bg-pink-500/5 rounded-full blur-3xl pointer-events-none" />
       
       <div className="max-w-5xl mx-auto relative z-10">
         <motion.div
@@ -86,13 +86,13 @@ const Certificates = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 to-purple-600 dark:from-white dark:to-purple-400 bg-clip-text text-transparent mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-white to-purple-400 bg-clip-text text-transparent mb-4">
             Certifications & Achievements
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             Continuously learning and growing through professional certifications
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full mt-6" />
+          <div className="w-20 h-1 bg-linear-to-r from-purple-600 to-pink-600 mx-auto rounded-full mt-6" />
         </motion.div>
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -110,24 +110,24 @@ const Certificates = () => {
                 className="group relative overflow-hidden"
               >
                 {/* Gradient background on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${bgColor} opacity-0 group-hover:opacity-5 transition-opacity pointer-events-none`} />
+                <div className={`absolute inset-0 bg-linear-to-br ${bgColor} opacity-0 group-hover:opacity-5 transition-opacity pointer-events-none`} />
                 
-                <div className="flex items-start gap-4 p-6 rounded-2xl bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700 group-hover:border-purple-300 dark:group-hover:border-purple-600 transition-all relative z-10">
+                <div className="flex items-start gap-4 p-6 rounded-2xl bg-gray-800 shadow-lg border border-gray-700 group-hover:border-purple-600 transition-all relative z-10">
                   {/* Icon */}
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: -10 }}
-                    className={`flex-shrink-0 w-14 h-14 rounded-lg bg-gradient-to-br ${bgColor} text-white flex items-center justify-center text-2xl`}
+                    className={`shrink-0 w-14 h-14 rounded-lg bg-linear-to-br ${bgColor} text-white flex items-center justify-center text-2xl`}
                   >
                     <FaAward />
                   </motion.div>
 
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition">
+                    <h3 className="text-lg font-bold text-white mb-1 group-hover:text-purple-400 transition">
                       {cert.title}
                     </h3>
                     
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                    <p className="text-sm text-gray-400 mb-3">
                       {cert.issuer} {cert.year && `• ${cert.year}`}
                     </p>
 
@@ -137,7 +137,7 @@ const Certificates = () => {
                       whileInView={{ opacity: 1, scale: 1 }}
                       className="inline-block"
                     >
-                      <span className={`inline-block px-3 py-1 text-xs font-semibold rounded-full bg-gradient-to-r ${bgColor} text-white`}>
+                      <span className={`inline-block px-3 py-1 text-xs font-semibold rounded-full bg-linear-to-r ${bgColor} text-white`}>
                         {cert.category}
                       </span>
                     </motion.div>
@@ -148,7 +148,7 @@ const Certificates = () => {
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: index * 0.05 + 0.2 }}
-                    className="flex-shrink-0 text-green-500 text-xl"
+                    className="shrink-0 text-green-500 text-xl"
                   >
                     ✓
                   </motion.div>

@@ -4,6 +4,9 @@ import App from "./App";
 import "./index.css";
 import ThemeProvider from "./context/ThemeContext";
 
+// Force dark theme
+document.documentElement.classList.add("dark");
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>
