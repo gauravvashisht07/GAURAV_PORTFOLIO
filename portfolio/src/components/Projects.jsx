@@ -31,7 +31,7 @@ const projects = [
       "Reduced item recovery response time by approximately 40%",
     ],
     tech: ["Node.js", "MongoDB", "Tailwind CSS"],
-    live: "#",
+    live: "https://lost-found-portal-n1pw.onrender.com/",
     github: "https://github.com/gauravvashisht07/LOST-FOUND-PORTAL",
     featured: true,
   },
@@ -114,6 +114,24 @@ const projects = [
   live: "https://gauravvashisht07.github.io/CALCULATOR/",
   github: "https://github.com/gauravvashisht07/CALCULATOR",
   featured: false,
+},
+
+{
+  title: "Life-OS (Full-Stack Productivity Application)",
+  description:
+    "A full-stack productivity web application that helps users manage daily tasks, organize workflows, and improve efficiency through a clean and distraction-free interface.",
+  points: [
+    "Developed a full-stack application using React (Vite) for frontend and Node.js with Express for backend",
+    "Designed RESTful APIs for task management including create, update, delete, and status tracking",
+    "Integrated MongoDB for persistent data storage of tasks and user workflows",
+    "Implemented modular backend architecture with routes, models, and middleware",
+    "Built a responsive and minimal UI focused on productivity and usability",
+    "Deployed the application with Vercel (frontend) and connected it with backend APIs"
+  ],
+  tech: ["React", "Vite", "Node.js", "Express", "MongoDB"],
+  live: "https://life-os-swph.vercel.app/",
+  github: "https://github.com/gauravvashisht07/Life-OS",
+  featured: true,
 },
 
 
