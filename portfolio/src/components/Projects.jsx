@@ -134,6 +134,24 @@ const projects = [
   featured: true,
 },
 
+{
+  title: "PREPX (Interview Preparation Platform)",
+  description:
+    "A full-stack interview preparation platform designed to help students practice coding, track progress, and prepare for technical interviews through structured resources and performance tracking.",
+  points: [
+    "Built a full-stack web application to simulate real interview preparation workflows",
+    "Implemented structured modules for coding practice, topic-wise preparation, and progress tracking",
+    "Designed a responsive and user-friendly interface for seamless navigation and learning",
+    "Developed backend APIs for handling user data, progress tracking, and content management",
+    "Integrated real-world features focused on improving interview readiness and consistency",
+    "Focused on scalable architecture and clean code practices for maintainability"
+  ],
+  tech: ["React", "Node.js", "Express", "MongoDB"],
+  live: "#",
+  github: "https://github.com/gauravvashisht07/PREPX",
+  featured: true,
+},
+
 
 ];
 
